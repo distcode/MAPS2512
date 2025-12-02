@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Types>
+	<Type>
+		<Name>System.IO.Fileinfo</Name>
+		<Members>
+
+			<AliasProperty>
+				<Name>Byte</Name>
+				<ReferencedMemberName>Length</ReferencedMemberName>
+			</AliasProperty>
+
+			
+
+		</Members>
+	</Type>
+</Types>
