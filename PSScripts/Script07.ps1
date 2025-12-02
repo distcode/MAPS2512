@@ -4,10 +4,13 @@ param (
     [String]$Name,
 
     [ValidateSet("gut","schlecht","neutral")]
+    [Alias("Mood")]
     [String]$Stimmung = "gut",
 
     [int]$Alter = 29
 )
+
+# Help
 
 # Definitions
 
