@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Types>
+	<Type>
+		<Name>ObjectName</Name>
+		<Members>
+
+			<AliasProperty>
+				<Name>Name of Alias</Name>
+				<ReferencedMemberName>Property</ReferencedMemberName>
+			</AliasProperty>
+
+			<NoteProperty>
+				<Name>Name of NoteProperty</Name>
+				<Value>Value of NoteProperty</Value>
+			</NoteProperty>
+
+			<ScriptProperty>
+				<Name>Name of ScriptProperty</Name>
+				<GetScriptBlock>
+					Code executed on using (getting) the property.
+					Use the keyword $this for current object.
+				</GetScriptBlock>
+			</ScriptProperty>
+
+			<ScriptMethod>
+				<Name>Name of ScriptMethod</Name>
+				<Script>
+					Code executed on using (invoking) the method.
+					Use the keyword $this for current object.
+				</Script>
+			</ScriptMethod>
+
+			<PropertySet>
+				<Name>Name of PropertySet</Name>
+				<ReferencedProperties>
+					<Name>Property of Object</Name>
+					<Name>Property of Object</Name>
+					<Name> ... </Name>
+				</ReferencedProperties>
+			</PropertySet>
+
+		</Members>
+	</Type>
+</Types>

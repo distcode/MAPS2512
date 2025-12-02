@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+	<ViewDefinitions>
+
+		<View>
+			<Name>Name of the view</Name>
+			<ViewSelectedBy>
+				<TypeName>Name of Type/Object</TypeName>
+			</ViewSelectedBy>
+
+			<TableControl>
+
+				<TableHeaders>
+
+					<TableColumnHeader>
+						<Label>first Header</Label>
+						<Alignment>right-left-center</Alignment>
+					</TableColumnHeader>
+
+
+					<TableColumnHeader>
+						<Label>second Header</Label>
+					</TableColumnHeader>
+
+				</TableHeaders>
+				<TableRowEntries>
+					<TableRowEntry>
+						<TableColumnItems>
+
+							<TableColumnItem>
+								<PropertyName>Length</PropertyName>
+							</TableColumnItem>
+
+							<TableColumnItem>
+								<ScriptBlock> any PS Scriptscode ($_. !) </ScriptBlock>
+							</TableColumnItem>
+
+						</TableColumnItems>
+					</TableRowEntry>
+				</TableRowEntries>
+
+			</TableControl>
+
+		</View>
+		<View>
+			<Name>Name of the view</Name>
+			<ViewSelectedBy>
+				<TypeName>Name of Type/Object</TypeName>
+			</ViewSelectedBy>
+
+			<ListControl>
+				<ListEntries>
+					<ListEntry>
+						<ListItems>
+
+							<ListItem>
+								<Label>Size</Label>
+								<PropertyName>Length</PropertyName>
+							</ListItem>
+
+							<ListItem>
+								<Label>Mode</Label>
+								<PropertyName>Mode</PropertyName>
+								<ItemSelectionCondition>
+									<ScriptBlock>$_.basename -notlike "my*"</ScriptBlock>
+								</ItemSelectionCondition>
+							</ListItem>
+
+						</ListItems>
+					</ListEntry>
+				</ListEntries>
+			</ListControl>
+		</Views>
+		<View>
+			<Name>Name of the view</Name>
+			<ViewSelectedBy>
+				<TypeName>Name of Type/Object</TypeName>
+			</ViewSelectedBy>
+
+			<WideControl>
+
+				<WideEntries>
+					<WideEntry>
+
+						<WideItem>
+							<PropertyName>Basename</PropertyName>
+						</WideItem>
+
+					</WideEntry>
+				</WideEntries>
+
+			</WideControl>
+
+		</View>
+
+	</ViewDefinitions>
+</Configuration>
