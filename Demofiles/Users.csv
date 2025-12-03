@@ -1,0 +1,10 @@
+FirstName,LastName,City,Description,Mailnickname,EmployeeID,Enabled
+Mike,Hammer,New York,Hutträger,mike,D0101,Yes
+Inspector,Columbo,Los Angeles,Trenchcoat,inspector,D0102,Yes
+Phryne,Fisher,Melbourne,wagemutig,phryne,D0201,Yes
+Hercules,Poirot,London,die kleinen grauen Zellen,hercules,D0301,No
+Jessica,Fletcher,Cabot Cove,Englischlehrerin,jessica,D0103,Yes
+Thomas,Magnum,Honolulu,fährt Ferrari,thomas,D0104,No
+Adrian,Monk,San Francisco,Super Titelmusik,adrian,D0105,Yes
+Patrick,Jane,Sacramento,Der Mentalist,patrick,D0106,No
+William,Murdoch,Toronto,Getleman,william,D0107,Yes
