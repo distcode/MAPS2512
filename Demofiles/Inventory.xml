@@ -1,0 +1,52 @@
+<Sites>
+  <Site location="Graz">
+    <Contact>Julia Kovi</Contact>
+    <Servers>
+      <Server model="IBM">
+        <Name>Asterix</Name>
+        <IP>1.2.3.4</IP>
+        <OS>Windows Server 2008 R2</OS>
+      </Server>
+      <Server model="IBM">
+        <Name>Obelix</Name>
+        <IP>1.2.3.5</IP>
+        <OS>Windows Server 2008 R2</OS>
+      </Server>
+      <Server model="HP">
+        <Name>Majestix</Name>
+        <IP>1.2.3.6</IP>
+        <OS>Windows Server 2003</OS>
+      </Server>
+      <Server model="DELL">
+        <Name>Methusalix</Name>
+        <IP>1.2.3.7</IP>
+        <OS>Windows Server 2025</OS>
+      </Server>
+    </Servers>
+  </Site>
+  <Site location="Vienna">
+    <Contact>Gerhard Maier</Contact>
+    <Servers>
+      <Server model="IBM">
+        <Name>Merkur</Name>
+        <IP>2.3.4.5</IP>
+        <OS>Windows Server 2008 R2</OS>
+      </Server>
+      <Server model="HP">
+        <Name>Venus</Name>
+        <IP>2.3.4.6</IP>
+        <OS>Windows Server 2012</OS>
+      </Server>
+      <Server model="HP">
+        <Name>Erde</Name>
+        <IP>2.3.4.7</IP>
+        <OS>Windows Server 2012</OS>
+      </Server>
+      <Server model="Lenovo">
+        <Name>Mars</Name>
+        <IP>4.5.6.7</IP>
+        <OS>Windows Server 2022</OS>
+      </Server>
+    </Servers>
+  </Site>
+</Sites>
