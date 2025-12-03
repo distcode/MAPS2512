@@ -3,9 +3,9 @@
 	<ViewDefinitions>
 
 		<View>
-			<Name>Name of the view</Name>
+			<Name>FileInfo</Name>
 			<ViewSelectedBy>
-				<TypeName>Name of Type/Object</TypeName>
+				<TypeName>System.IO.Fileinfo</TypeName>
 			</ViewSelectedBy>
 
 			<TableControl>
@@ -13,28 +13,36 @@
 				<TableHeaders>
 
 					<TableColumnHeader>
-						<Label>first Header</Label>
-						<Alignment>right-left-center</Alignment>
+						<Label>Filename</Label>
+						<Alignment>left</Alignment>
 					</TableColumnHeader>
 
+					<TableColumnHeader>
+						<Label>Size</Label>
+					</TableColumnHeader>
 
 					<TableColumnHeader>
-						<Label>second Header</Label>
+						<Label>Encrypted</Label>
 					</TableColumnHeader>
 
 				</TableHeaders>
+
 				<TableRowEntries>
 					<TableRowEntry>
 						<TableColumnItems>
 
 							<TableColumnItem>
-								<PropertyName>Length</PropertyName>
+								<PropertyName>Name</PropertyName>
 							</TableColumnItem>
 
 							<TableColumnItem>
-								<ScriptBlock> any PS Scriptscode ($_. !) </ScriptBlock>
+								<PropertyName>Length</PropertyName>
 							</TableColumnItem>
-
+							
+							<TableColumnItem>
+								<PropertyName>Encrypted</PropertyName>
+						
+							</TableColumnItem>
 						</TableColumnItems>
 					</TableRowEntry>
 				</TableRowEntries>
@@ -42,10 +50,11 @@
 			</TableControl>
 
 		</View>
+		
 		<View>
-			<Name>Name of the view</Name>
+			<Name>Fileinfo</Name>
 			<ViewSelectedBy>
-				<TypeName>Name of Type/Object</TypeName>
+				<TypeName>System.IO.Fileinfo</TypeName>
 			</ViewSelectedBy>
 
 			<ListControl>
@@ -56,13 +65,16 @@
 							<ListItem>
 								<Label>Size</Label>
 								<PropertyName>Length</PropertyName>
+								<ItemSelectionCondition>
+									<ScriptBlock>$_.basename -like "sc*"</ScriptBlock>
+								</ItemSelectionCondition>
 							</ListItem>
 
 							<ListItem>
-								<Label>Mode</Label>
-								<PropertyName>Mode</PropertyName>
+								<Label>Name</Label>
+								<PropertyName>Name</PropertyName>
 								<ItemSelectionCondition>
-									<ScriptBlock>$_.basename -notlike "my*"</ScriptBlock>
+									<ScriptBlock>$_.basename -like "sc*"</ScriptBlock>
 								</ItemSelectionCondition>
 							</ListItem>
 
@@ -70,27 +82,6 @@
 					</ListEntry>
 				</ListEntries>
 			</ListControl>
-		</View>
-		<View>
-			<Name>Name of the view</Name>
-			<ViewSelectedBy>
-				<TypeName>Name of Type/Object</TypeName>
-			</ViewSelectedBy>
-
-			<WideControl>
-
-				<WideEntries>
-					<WideEntry>
-
-						<WideItem>
-							<PropertyName>Basename</PropertyName>
-						</WideItem>
-
-					</WideEntry>
-				</WideEntries>
-
-			</WideControl>
-
 		</View>
 
 	</ViewDefinitions>
