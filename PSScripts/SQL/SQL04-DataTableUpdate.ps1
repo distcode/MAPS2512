@@ -9,16 +9,17 @@ $myConn.Open()
 $commandstring = 'Select * From SalesLT.Customer'
 
 $myDataAdapter = New-Object -TypeName System.Data.SqlClient.SqlDataAdapter($commandstring, $myConn)
+$myCommandBuilder = New-Object System.Data.SqlClient.SqlCommandBuilder($myDataAdapter)
+
 $myDataTable = New-Object -TypeName System.Data.DataTable
+$rowcount = $myDataAdapter.Fill($myDataTable)
 
-$rowCount = $myDataAdapter.Fill($myDataTable)
+$myDataTable | Where-Object { $_.Lastname -eq 'Lator'} | 
+    ForEach-Object {
+        $_.CompanyName = 'maps'
+        $_.EmailAddress = 'venti.lator@maps.at'
+    }
 
-# $myDataTable
-
-# $myDataTable.Rows[9].Item('Lastname')
-
-$myDataTable | Where-Object { $_.Lastname -like 'Lator' } # | Select-Object -Property LastName,FirstName,CompanyName
-
-"Anzahl Records: $rowCount"
+$myDataAdapter.update($myDataTable)
 
 $myConn.Close()

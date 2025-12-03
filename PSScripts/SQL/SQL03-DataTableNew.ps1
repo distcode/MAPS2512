@@ -9,16 +9,21 @@ $myConn.Open()
 $commandstring = 'Select * From SalesLT.Customer'
 
 $myDataAdapter = New-Object -TypeName System.Data.SqlClient.SqlDataAdapter($commandstring, $myConn)
+$myCommandBuilder = New-Object System.Data.SqlClient.SqlCommandBuilder($myDataAdapter)
+
 $myDataTable = New-Object -TypeName System.Data.DataTable
+$rowcount = $myDataAdapter.Fill($myDataTable)
 
-$rowCount = $myDataAdapter.Fill($myDataTable)
+$myDataRow = $myDataTable.NewRow()
 
-# $myDataTable
+$myDataRow.CustomerID = 30119
+$myDataRow.FirstName = 'Venti'
+$myDataRow.LastName = 'Lator'
+$myDataRow.NameStyle = $false
+$myDatarow.PasswordHash = 'anyHash'
+$myDataRow.PasswordSalt = 'anySalt'
+$myDataRow.rowguid = (New-Guid).Guid.ToString()
 
-# $myDataTable.Rows[9].Item('Lastname')
+$myDataTable.Rows.Add($myDataRow)
 
-$myDataTable | Where-Object { $_.Lastname -like 'Lator' } # | Select-Object -Property LastName,FirstName,CompanyName
-
-"Anzahl Records: $rowCount"
-
-$myConn.Close()
+$myDataAdapter.Update($myDataTable)
