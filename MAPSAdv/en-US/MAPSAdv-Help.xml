@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<helpItems xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" schema="maml" xmlns="http://msh">
+  <command:command>
+    <command:details>
+      <command:name>Start-Feierabend</command:name>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+      <command:verb>Start</command:verb>
+      <command:noun>Feierabend</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Start-Feierabend</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Starttime</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Starttime Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Int32</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Starttime</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Starttime Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Int32</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Object</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>{{ Fill in the Notes }}</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <command:uri />
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Write-Hello</command:name>
+      <maml:description>
+        <maml:para>Begrüßung</maml:para>
+      </maml:description>
+      <command:verb>Write</command:verb>
+      <command:noun>Hello</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Laß Dich begrüßen, dann wird der Tag bestimmt besser ;)</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Write-Hello</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Object</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>{{ Fill in the Notes }}</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>Write-Hello</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <command:uri />
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+</helpItems>
