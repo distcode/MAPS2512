@@ -37,6 +37,23 @@ class HostInfo {
     }
 }
 
+enum HostinfoType {
+    Desktop
+    Server
+    Phone
+    Tablet
+}
+
+[Flags()] enum HostinfoFeatures {
+    None = 0
+    Touchscreen = 1
+    Webcam = 2
+    Microphone = 4
+    GPS = 8
+    Pen = 16
+    FaceRecognition = 32
+}
+
 . $PSScriptRoot\StartFeierabend.ps1
 . $PSScriptRoot\WriteHello.ps1
 
@@ -50,6 +67,8 @@ Update-FormatData $PSScriptRoot\Fileinfo.format.ps1xml
 
 
 [psobject].Assembly.GetType('System.Management.Automation.TypeAccelerators')::Add('HostInfo',[HostInfo])
+[psobject].Assembly.GetType('System.Management.Automation.TypeAccelerators')::Add('HostinfoType',[HostinfoType])
+[psobject].Assembly.GetType('System.Management.Automation.TypeAccelerators')::Add('HostinfoFeatures',[HostinfoFeatures])
 
 Export-ModuleMember -Variable 'MapsVariable'
 Export-ModuleMember -Function @('Write-Hello','Start-Feierabend')
