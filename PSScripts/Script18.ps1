@@ -1,7 +1,7 @@
 
 function Set-ADUserAdv {
 
-    [CmdletBinding()]
+    [CmdletBinding(HelpUri='https://www.orf.at')]
     param (
         
         [parameter(Mandatory=$true)]
