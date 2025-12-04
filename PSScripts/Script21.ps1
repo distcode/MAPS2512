@@ -3,7 +3,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
 
-if (-not (Test-Path -Path c:\Temp2) {
+if (-not (Test-Path -Path c:\Temp2)) {
     new-item -path c:\temp2 -Type Directory
 }
 
