@@ -10,7 +10,7 @@
       <Server model="IBM">
         <Name>Obelix</Name>
         <IP>1.2.3.5</IP>
-        <OS>Windows Server 2008 R2</OS>
+        <OS>Windows Server 2025</OS>
       </Server>
       <Server model="HP">
         <Name>Majestix</Name>
