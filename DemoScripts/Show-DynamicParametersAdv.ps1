@@ -63,9 +63,9 @@ function Show-DynamicParameters2 {
             # define a new dynamic parameter Status
             $attributesStatus = New-Object System.Collections.ObjectModel.Collection[System.Attribute]
             $paramAttributeStatus = New-Object System.Management.Automation.ParameterAttribute
-            $validateSetEmail = New-Object System.Management.Automation.ValidateSetAttribute("Supplyer", "Customer")
+            $validateSetStatus = New-Object System.Management.Automation.ValidateSetAttribute("Supplyer", "Customer")
             $attributesStatus.Add($paramAttributeStatus)
-            $attributesStatus.Add($validateSetEmail)
+            $attributesStatus.Add($validateSetStatus)
             $dynamicParamStatus = New-Object System.Management.Automation.RuntimeDefinedParameter("Status", [string], $attributesStatus)
             $paramDictionary.Add("Status", $dynamicParamStatus)
             
